@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Uneducated Coder</title><link>https://grizzlyc.github.io/post/</link><description>Recent content in Posts on Uneducated Coder</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 16 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://grizzlyc.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Godaddy LLM Lessons</title><link>https://grizzlyc.github.io/p/godaddy-llm/</link><pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate><guid>https://grizzlyc.github.io/p/godaddy-llm/</guid><description>&lt;img src="https://grizzlyc.github.io/cover.jpg" alt="Featured image of post Godaddy LLM Lessons" />&lt;p>GoDaddy has a gem of a blog post on lessons learned while building Large Language Models(LLMs) in production.&lt;/p>
+&lt;p>I think there are a lot of key take aways but one that is particularly catching is how they use an agent for RAG rather than using the user&amp;rsquo;s direct input.&lt;/p>
+&lt;p>The conversations with the customer are categorized by the LLM. They have a conversation with the customer and try to narrow down what&amp;rsquo;s the issue. From there the LLM knows how to supplement its context with the right information, using a RAG system search.&lt;/p>
+&lt;p>They state there are two essential patterns in a Retrieval-Augmented Generation(RAG) implementation.&lt;/p>
+&lt;ol>
+&lt;li>Including dynamic content to aid in the customization of the prompt behavior.&lt;/li>
+&lt;li>Providing content relevant to the conversation.&lt;/li>
+&lt;/ol>
+&lt;p>You can add and supplement updated information to the context. From this the LLM can modify its own context.&lt;/p>
+&lt;p>By having the LLM control when to make searches on the RAG System, the relevancy of the information is normally improved.&lt;/p>
+&lt;p>fi a system uses the user&amp;rsquo;s raw input, it&amp;rsquo;s likely to mudy the context. Godaddy observed users would exchange pleasentries before getting to the issue.&lt;/p>
+&lt;p>So how do you ensure these are improvements? Presumably, these improvements are verified through evaluations(evals). I have much to learn.&lt;/p></description></item></channel></rss>
